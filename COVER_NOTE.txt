@@ -1,0 +1,8 @@
+The developed solution uses a native XML parser to convert XML to an array.
+This array is then iterated and convertion is applied tag by tag:
+  If a tag belongs to an element containing other elements then the json object is "opened".
+  If the tag belongs to an element without other elements then the json object is "opened" and "closed" consecutively.
+The program is divided in the following functions:
+  is_valid_xml($xml): checks if the xml is valid; returns a boolean on true or false;
+  xml_to_json($xml): converts the xml to json as described above (this is the function with all the juice); returns the json string;
+  unit_tests(): performs unit tests with different inputs and evaluates different level of possible errors; Prints the result to terminal;
